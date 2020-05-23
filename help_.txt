@@ -1,0 +1,23 @@
+##################################################
+#####                  AIDE                  #####
+##################################################
+
+## USAGE
+
+  main.py -e <element to sort> -s <sort Type> | -r | --find=')
+        -e : name - path -creationDate - modificationDate (aka : --element)')
+        -s : croissant - decroissant (aka : --sType)')
+        -r : (aka : --remove)')
+    --find=: expression boolean | variables utilisables:  name  ; type ; creationDate ; modificationDate')
+
+
+## EXEMPLES
+
+  main.py -e name -s croissant
+    -> Afficher tout les elements dans l'ordre alphabetique 
+  
+  main.py -r
+    -> Supprimer des elements
+
+  main.py --find="name == 'zoo' and type == 'Livre'"
+    -> Chercher tout les elements dont le nom est 'zoo.txt' et dont le type est 'Livre'

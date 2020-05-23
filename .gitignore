@@ -127,3 +127,30 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom
+fichiers/*
+
+# Modules
+astroid*
+autopep8*
+Color-Console*
+colorama*
+cutie*
+EbookLib*
+isort*
+lazy-object-proxy*
+lxml*
+mccabe*
+pycodestyle*
+pylint*
+readchar*
+six*
+termcolor*
+typed-ast*
+wrapt*
+tests*
+typed*
+lazy*
+bin
+Color*

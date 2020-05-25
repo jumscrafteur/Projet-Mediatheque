@@ -4,10 +4,12 @@
 
 ## USAGE
 
-  main.py -e <element to sort> -s <sort Type> | -r | --find=')
+  main.py -e <element to sort> -s <sort Type> | -c | -r | -m | --find=')
         -e : name - path -creationDate - modificationDate (aka : --element)')
         -s : croissant - decroissant (aka : --sType)')
+        -c : (aka : --create)')
         -r : (aka : --remove)')
+        -m : (aka : --modify)')
     --find=: expression boolean | variables utilisables:  name  ; type ; creationDate ; modificationDate')
 
 
@@ -21,3 +23,7 @@
 
   main.py --find="name == 'zoo' and type == 'Livre'"
     -> Chercher tout les elements dont le nom est 'zoo.txt' et dont le type est 'Livre'
+
+## MORE INFO
+
+-| https://github.com/jumscrafteur/Projet-Mediatheque/blob/master/README.md |-

@@ -24,14 +24,14 @@ Lancer :
 ```cmd
 main.py <options>
 ```
-| Argument  | Utilité                       | Valeurs                                      | Alisas |
-| --------- | ----------------------------- | -------------------------------------------- | ------ | 
-| --element | selectionner l'element de tri | name - path -creationDate - modificationDate | -e     |
-| --sort    | selectionner le type de tri   | croissant - decroissant                      | -s     |
-| --create  | creer un objets               | ❌                                           | -c     |
-| --remove  | suprimer des objets           | ❌                                           | -r     |
-| --modify  | modifier un objets            | ❌                                           | -m     |
-| --find    | rechercher des objets         | expression boolean                           | ❌     |
+| Argument  | Utilité                       | Valeurs                                                                                     | Alisas |
+| --------- | ----------------------------- | ------------------------------------------------------------------------------------------- | ------ | 
+| --element | selectionner l'element de tri | name - path -creationDate - modificationDate                                                | -e     |
+| --sort    | selectionner le type de tri   | croissant - decroissant                                                                     | -s     |
+| --create  | creer un objet                | ❌                                                                                          | -c     |
+| --remove  | suprimer des objets           | ❌                                                                                          | -r     |
+| --modify  | modifier un objet             | ❌                                                                                          | -m     |
+| --find    | rechercher des objets         | expression boolean <br/>(variables utilisables:  name  ; type ; creationDate ; modificationDate) | ❌     |
 
 ### EXEMPLES
 
@@ -39,16 +39,31 @@ main.py <options>
   ```
   main.py -e name -s croissant
   ```
+  ![search help](https://i.imgur.com/P3RoVQS.gif)
 
-- Supprimer des elements
+- Creer un element
+  ```
+  main.py -c
+  ```
+  ![create help](https://i.imgur.com/2kLlOgc.gif)
+
+* Supprimer des elements
   ```
   main.py -r
   ```
+  ![delete help](https://i.imgur.com/Bdg1W3r.gif)
+
+- Modifier un element
+  ```
+  main.py -m
+  ```
+  ![modify help](https://i.imgur.com/IATcFbR.gif)
 
 * Chercher tout les elements dont le nom est 'zoo.txt' et dont le type est 'Livre'
   ```
   main.py --find="name == 'zoo' and type == 'Livre'"
   ```
+  ![find help](https://i.imgur.com/5BBfiH3.gif)
 
 ## Fonctionnalités 
 

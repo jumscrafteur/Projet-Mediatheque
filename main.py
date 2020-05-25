@@ -1,10 +1,18 @@
-﻿import os
-import stat
-import sys
-import getopt
-from packages import cutie
-import re
-from datetime import datetime
+﻿try:
+    import os
+    import stat
+    import sys
+    import getopt
+    import cutie
+    import re
+    from datetime import datetime
+    pass
+except:
+    print("[!] Il semble qu'un des modules ne soit pas disponible")
+    print("    Essayez cette commande afin de les installer :")
+    print("    > pip install -r requirements.txt -t <Current directory>")
+    sys.exit(2)
+    pass
 
 
 class FILE:
@@ -169,9 +177,9 @@ class MEDIA:
             print("Il semble que le fichier help_.txt n'existe pas 🤔")
             sys.exit(2)
             pass
-        helpTxt = helpFile.read
+        helpTxt = helpFile.read()
         print(helpTxt)
-        helpTxt.close()
+        helpFile.close()
         sys.exit()
         pass
 
@@ -212,13 +220,14 @@ mediatheque = MEDIA()
 
 for fileName in listFileName:
     f = open(os.path.join(os.path.abspath('./fichiers'), fileName), 'r')
-    # print(f.read())
     item = FILE(f.read(), fileName)
     mediatheque.addItem(item)
     f.close()
-    # print(item.name)
     pass
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv[1:]) != 0:
     main(sys.argv[1:])
+else:
+    mediatheque.helpCmd()
+    pass

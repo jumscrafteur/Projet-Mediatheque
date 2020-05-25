@@ -29,6 +29,7 @@ main.py <options>
 | --element | selectionner l'element de tri | name - path -creationDate - modificationDate | -e     |
 | --sort    | selectionner le type de tri   | croissant - decroissant                      | -s     |
 | --remove  | suprimer des objets           | ❌                                           | -r     |
+| --modify  | modifier des objets           | ❌                                           | -m     |
 | --find    | rechercher des objets         | expression boolean                           | ❌     |
 
 ### EXEMPLES
@@ -53,7 +54,7 @@ main.py <options>
 
 * [x] créer un élément
 * [x] détruire un élément
-* [ ] déplacer un élément
+* [x] déplacer un élément
 * [x] trier un élément
 * [x] rechercher un élément
 * [x] rechercher un groupe d'élément

@@ -155,23 +155,21 @@ class MEDIA:
             pass
 
     def search(self, arg):
-        print("| {0:^{lengthN}} | {1:^{lengthS}} | {2:^{lengthC}} | {3:^{lengthM}} |".format(
-            "File Name", "Size", "Creation", "Modification", lengthN=mediatheque.maxNameLen, lengthS=mediatheque.maxSizeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
+        print("| {0:^{lengthN}} | {1:^{lengthT}} | {2:^{lengthC}} | {3:^{lengthM}} |".format(
+            "File Name", "Type", "Creation", "Modification", lengthN=mediatheque.maxNameLen, lengthT=mediatheque.maxTypeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
 
-        print("|={0:=^{lengthN}}=|={0:=^{lengthS}}=|={0:=^{lengthC}}=|={0:=^{lengthM}}=|".format(
-            "", lengthN=mediatheque.maxNameLen, lengthS=mediatheque.maxSizeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
+        print("|={0:=^{lengthN}}=|={0:=^{lengthT}}=|={0:=^{lengthC}}=|={0:=^{lengthM}}=|".format(
+            "", lengthN=mediatheque.maxNameLen, lengthT=mediatheque.maxTypeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
         for item in mediatheque.items:
             name = item.name
-            extension = item.extension
             type = item.type
-            size = item.size
             creationDate = item.creationDate
             modificationDate = item.modificationDate
             if eval(arg):
-                print("| {0:<{lengthN}} | {1:<{lengthS}} | {2:<{lengthC}} | {3:<{lengthM}} |".format(
-                    item.name, item.size, datetime.fromtimestamp(
+                print("| {0:<{lengthN}} | {1:<{lengthT}} | {2:<{lengthC}} | {3:<{lengthM}} |".format(
+                    item.name, item.type, datetime.fromtimestamp(
                         item.creationDate).strftime("%d/%m/%Y a %H:%M:%S"), datetime.fromtimestamp(
-                        item.modificationDate).strftime("%d/%m/%Y a %H:%M:%S"), lengthN=mediatheque.maxNameLen, lengthS=mediatheque.maxSizeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
+                        item.modificationDate).strftime("%d/%m/%Y a %H:%M:%S"), lengthN=mediatheque.maxNameLen, lengthT=mediatheque.maxTypeLen, lengthC=mediatheque.maxCDLen, lengthM=mediatheque.maxMDLen))
                 pass
             pass
         pass

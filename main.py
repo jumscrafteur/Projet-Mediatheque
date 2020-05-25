@@ -92,6 +92,26 @@ class MEDIA:
         f.write(f'"name": "{name}"\n"path": "{path}"\n"type": "{type}"')
         f.close()
 
+    def modifyItem(self):
+        choiceList = []
+        itemList = []
+        for item in self.items:
+            choiceList.append(item.name)
+            itemList.append(item)
+        itemIndex = cutie.select(choiceList)
+        item = itemList[itemIndex]
+
+        print(f"\n# Element choisis {item.name}\n")
+
+        f = open(item.idPath, "w")
+
+        newName = input(f"Nouveau nom pour l'element [{item.name}] : ")
+        newPath = input(f"Nouveau chemin pour l'element [{item.path}] : ")
+        newType = input(f"Nouveau type pour l'element [{item.type}] : ")
+        f.write(
+            f'"name": "{newName}"\n"path": "{newPath}"\n"type": "{newType}"')
+        f.close()
+
     def sort(self, element, sortType):
         lenght = len(self.items)
         for i in range(lenght-1):
@@ -229,5 +249,9 @@ for fileName in listFileName:
 if __name__ == "__main__" and len(sys.argv[1:]) != 0:
     main(sys.argv[1:])
 else:
-    mediatheque.helpCmd()
+    # mediatheque.helpCmd()
+    mediatheque.modifyItem()
     pass
+
+
+# '"name": "{}"\n"path": "{}"\n"type": "{}"'

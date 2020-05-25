@@ -28,8 +28,9 @@ main.py <options>
 | --------- | ----------------------------- | -------------------------------------------- | ------ | 
 | --element | selectionner l'element de tri | name - path -creationDate - modificationDate | -e     |
 | --sort    | selectionner le type de tri   | croissant - decroissant                      | -s     |
+| --create  | creer un objets               | ❌                                           | -c     |
 | --remove  | suprimer des objets           | ❌                                           | -r     |
-| --modify  | modifier des objets           | ❌                                           | -m     |
+| --modify  | modifier un objets            | ❌                                           | -m     |
 | --find    | rechercher des objets         | expression boolean                           | ❌     |
 
 ### EXEMPLES
@@ -43,7 +44,6 @@ main.py <options>
   ```
   main.py -r
   ```
-
 
 * Chercher tout les elements dont le nom est 'zoo.txt' et dont le type est 'Livre'
   ```

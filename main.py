@@ -105,9 +105,12 @@ class MEDIA:
 
         f = open(item.idPath, "w")
 
-        newName = input(f"Nouveau nom pour l'element [{item.name}] : ")
-        newPath = input(f"Nouveau chemin pour l'element [{item.path}] : ")
-        newType = input(f"Nouveau type pour l'element [{item.type}] : ")
+        newName = input(
+            f"Nouveau nom pour l'element [{item.name}] : ") or item.name
+        newPath = input(
+            f"Nouveau chemin pour l'element [{item.path}] : ") or item.path
+        newType = input(
+            f"Nouveau type pour l'element [{item.type}] : ") or item.type
         f.write(
             f'"name": "{newName}"\n"path": "{newPath}"\n"type": "{newType}"')
         f.close()
@@ -210,7 +213,7 @@ def main(argv):
     sortType = None
     try:
         opts, args = getopt.getopt(
-            argv, "he:s:rfc", ["help", "element=", "sortType=", "remove", "find=", "create"])
+            argv, "he:s:rfcm", ["help", "element=", "sortType=", "remove", "find=", "create", "modify"])
         args = args
     except getopt.GetoptError:
         print('Invalid arguments please use main.py -h for help')
@@ -228,6 +231,8 @@ def main(argv):
             mediatheque.search(arg)
         elif opt in ("-c", "--create"):
             mediatheque.createItem()
+        elif opt in ("-m", "--modify"):
+            mediatheque.modifyItem()
 
     if element != None and sortType != None:
         mediatheque.sort(element, sortType)
@@ -249,9 +254,5 @@ for fileName in listFileName:
 if __name__ == "__main__" and len(sys.argv[1:]) != 0:
     main(sys.argv[1:])
 else:
-    # mediatheque.helpCmd()
-    mediatheque.modifyItem()
+    mediatheque.helpCmd()
     pass
-
-
-# '"name": "{}"\n"path": "{}"\n"type": "{}"'

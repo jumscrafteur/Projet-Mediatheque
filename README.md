@@ -1,5 +1,5 @@
 # Projet-Mediatheque
-
+###### Translated version -> [README-EN.md](./README-EN.md)
 #### Mini projet de fin d'année 2019-2020 de terminal sti2d
 
 ## Sujet
@@ -24,13 +24,13 @@ Lancer :
 ```cmd
 main.py <options>
 ```
-| Argument  | Utilité                       | Valeurs                                                                                     | Alisas |
-| --------- | ----------------------------- | ------------------------------------------------------------------------------------------- | ------ | 
-| --element | selectionner l'element de tri | name - path -creationDate - modificationDate                                                | -e     |
-| --sort    | selectionner le type de tri   | croissant - decroissant                                                                     | -s     |
-| --create  | creer un objet                | ❌                                                                                          | -c     |
-| --remove  | suprimer des objets           | ❌                                                                                          | -r     |
-| --modify  | modifier un objet             | ❌                                                                                          | -m     |
+| Argument  | Utilité                       | Valeurs                                                                                          | Alisas |
+| --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ | ------ | 
+| --element | selectionner l'element de tri | name - path -creationDate - modificationDate                                                     | -e     |
+| --sort    | selectionner le type de tri   | croissant - decroissant                                                                          | -s     |
+| --create  | creer un objet                | ❌                                                                                               | -c     |
+| --remove  | suprimer des objets           | ❌                                                                                               | -r     |
+| --modify  | modifier un objet             | ❌                                                                                               | -m     |
 | --find    | rechercher des objets         | expression boolean <br/>(variables utilisables:  name  ; type ; creationDate ; modificationDate) | ❌     |
 
 ### EXEMPLES

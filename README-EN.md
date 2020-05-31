@@ -31,7 +31,7 @@ main.py <options>
 | --create  | objectify                     | ❌                                                                                               | -c     |
 | --remove  | delete items                  | ❌                                                                                               | -r     |
 | --modify  | make a change                 | ❌                                                                                               | -m     |
-| --find    | search for objects            | expression boolean <br/>(variables utilisables:  name  ; type ; creationDate ; modificationDate) | ❌     |
+| --find    | search for objects            | expression boolean <br/>(usable variables:  name  ; type ; creationDate ; modificationDate)      | ❌     |
 
 ### EXEMPLES
 

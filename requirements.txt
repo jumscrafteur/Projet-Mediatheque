@@ -6,7 +6,7 @@ cutie==0.2.2
 EbookLib==0.17.1
 isort==4.3.21
 lazy-object-proxy==1.4.2
-lxml==4.4.1
+lxml==4.9.1
 mccabe==0.6.1
 pycodestyle==2.5.0
 pylint==2.3.1
